@@ -1,0 +1,131 @@
+// 1024px
+@include lg-xlg {
+  ::-webkit-scrollbar{
+    display: none;
+  }
+}
+// 900px
+@include md-lg {
+    .slider {
+        .slick-dots {
+            bottom: 12px;
+            li {
+                button {
+                    width: 10px;
+                    height: 10px;
+                }
+            }
+        }
+    }
+}
+// 800px
+@include sm-md-extra {
+    .auto__container {
+        padding: 0 30px;
+    }
+    @include intro-sm-md-extra;
+    @include footer-sm-md-extra;
+}
+// 700px
+@include sm-md {
+  .auto__container {
+    padding: 0 20px;
+  }
+  main {
+    padding: 35px 0 110px;
+  }
+  .slider {
+    .slick-dots {
+      bottom: 10px;
+      li {
+        width: 12px;
+        height: 12px;
+        button {
+          width: 7px;
+          height: 7px;
+        }
+      }
+    }
+  }
+  @include nav-sm-md;
+  @include header-sm-md;
+
+  @include gallery-sm-md;
+  @include footer-sm-md;
+
+}
+// 560px
+@include xsm-sm {
+    .auto__container {
+        padding: 0 16px;
+    }
+    h1, h2 {
+      font-size: 20px;
+      line-height: 25px;
+      margin-bottom: 28px;
+    }
+    h3 {
+      font-size: 20px;
+      line-height: 25px;
+    }
+    main {
+      padding: 25px 0 90px;
+    }
+    @include nav-xsm-sm;
+    @include intro-xsm-sm;
+    @include gallery-xsm-sm;
+    @include footer-xsm-sm;
+
+}
+// 480px
+@include xxsm-xsm {
+    .slider {
+      padding-bottom: 40%;
+    }
+    body {
+      font-size: 15px;
+      line-height: 19px;
+    }
+    h1, h2 {
+      font-size: 18px;
+      line-height: 24px;
+      margin-bottom: 16px;
+      padding-bottom: 3px;
+      &::after {
+        height: 1px;
+      }
+    }
+    h3 {
+      font-size: 18px;
+      line-height: 24px;
+    }
+    main {
+      padding: 16px 0 50px;
+    }
+    @include hero-xxsm-xsm;
+    @include gallery-xxsm-xsm;
+    @include footer-xxsm-xsm;
+}
+// 390px
+@include xxxsm-xxsm {
+  .slider {
+    .slick-dots {
+      li {
+        width: 8px;
+        height: 8px;
+        button {
+          width: 6px;
+          height: 6px;
+        }
+      }
+    }
+  }
+    body {
+      font-size: 13px;
+      line-height: 16px;
+    }
+    @include header-xxxsm-xxsm;
+    @include nav-xxxsm-xxsm;
+    @include intro-xxxsm-xxsm;
+    @include gallery-xxxsm-xxsm;
+}

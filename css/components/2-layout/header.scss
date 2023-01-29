@@ -1,0 +1,97 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: $white;
+  z-index: 10;
+  height: 91px;
+  transition: .2s ease;
+  .auto__container {
+    position: static;
+  }
+  &.sticky {
+    height: 49.11px;
+    box-shadow: 0px 3px 6px rgba($color: #000000, $alpha: 0.16);
+    .header__inner {
+      padding: 8px 0 12px;
+      transition: .3s ease;
+      &-logo {
+        width: 100px;
+      }
+    }
+    .burger {
+      width: 25px;
+      height: 25px;
+    }
+    .nav {
+      top: 49.11px;
+      height: calc(100% - 49.11px);
+      &__inner {
+        a {
+          font-size: 12px;
+          line-height: 14px;
+          &::after {
+            height: 3px;
+            top: calc(100% + 7px);
+          }
+        }
+      }
+    }
+  }
+  &__inner {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    padding: 15px 0 25px;
+    box-sizing: border-box;
+    &-logo {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 150px;
+      transition: .2s linear;
+      img {
+        width: 100%;
+      }
+    }
+  }
+}
+@mixin header-sm-md {
+  .header {
+    height: 70.05px;
+    &__inner {
+      padding: 12px 0 15px;
+      &-logo {
+        width: 130px;
+      }
+    }
+  }
+  .hero {
+    margin-top: 70.05px;
+  }
+}
+@mixin header-xxxsm-xxsm {
+  .header {
+    height: 58.43px;
+    &__inner {
+      padding: 10px 0 12px;
+      &-logo {
+        width: 110px;
+      }
+    }
+  }
+  .hero {
+    margin-top: 58.43px;
+  }
+}
+@keyframes sticky {
+  0% {
+    top: -60px;
+    opacity: 0;
+  }
+  100% {
+    top: 0;
+    opacity: 1;
+  }
+}

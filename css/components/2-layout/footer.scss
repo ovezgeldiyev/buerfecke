@@ -1,0 +1,131 @@
+.footer {
+  background-color: $dark-blue;
+  padding: 45px 0 75px;
+  &__inner {
+    display: flex;
+    flex-wrap: wrap;
+    color: $white;
+    &-col {
+      width: 50%;
+      display: flex;
+      margin-bottom: 40px;
+    }
+    &-contact {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+    }
+    p {
+      margin-right: 35px;
+      font-size: 12px;
+    }
+    h2 {
+      width: 100%;
+      margin-bottom: 16px;
+    }
+    a {
+      color: $white;
+      font-size: 12px;
+    }
+    &-links {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      margin-bottom: 30px;
+      a {
+        margin-right: 60px;
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+    }
+    &-copy {
+      font-size: 12px;
+      line-height: 16px;
+    }
+  }
+}
+@mixin footer-sm-md-extra {
+  .footer {
+    padding: 35px 0 60px;
+    &__inner {
+      &-col {
+        margin-bottom: 35px;
+      }
+      p {
+        margin-right: 30px;
+      }
+      &-links {
+        margin-bottom: 25px;
+      }
+    }
+  }
+}
+@mixin footer-sm-md {
+  .footer {
+    padding: 25px 0 50px;
+    &__inner {
+      &-col {
+        margin-bottom: 16px;
+      }
+      p {
+        margin-right: 18px;
+        font-size: 10px;
+        line-height: 17px;
+      }
+      a {
+        line-height: 18px;
+      }
+      &-links {
+        margin-bottom: 20px;
+      }
+    }
+  }
+}
+@mixin footer-xsm-sm {
+  .footer {
+    padding: 20px 0 40px;
+    &__inner {
+ 
+      &-col {
+        width: 100%;
+        justify-content: space-between;
+        margin-bottom: 25px;
+        max-width: 400px;
+      }
+      p {
+        margin-right: 30px;
+        font-size: 12px;
+        line-height: 18px;
+      }
+      &-contact {
+        text-align: end;
+      }
+      &-links {
+        justify-content: space-between;
+        max-width: 400px;
+      }
+      &-copy {
+        text-align: center;
+        width: 100%;
+      }
+    }
+  }
+}
+@mixin footer-xxsm-xsm {
+  .footer {
+    padding: 18px 0 30px;
+    &__inner {
+      &-contact {
+        text-align: end;
+      }
+      &-links {
+        justify-content: space-between;
+      }
+      &-copy {
+        text-align: center;
+        width: 100%;
+      }
+    }
+  }
+}

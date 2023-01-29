@@ -1,0 +1,104 @@
+h1, h2 {
+  font-size: 22px;
+  text-transform: uppercase;
+  line-height: 28px;
+  font-weight: 500;
+  position: relative;
+  padding-bottom: 6px;
+  margin-bottom: 30px;
+  &::after {
+    position: absolute;
+    content: "";
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: $primary;
+  }
+}
+h3 {
+  font-size: 22px;
+  line-height: 28px;
+  text-transform: uppercase;
+  font-weight: 500;
+  color: $primary;
+}
+h5 {
+  font-size: 21px;
+  line-height: 28px;
+  text-transform: uppercase;
+  font-weight: 900;
+}
+h6 {
+  font-size: 17px;
+  font-weight: 500;
+  text-transform: uppercase;
+  line-height: 22px;
+  small {
+    font-weight: 300;
+  }
+}
+p.sm {
+  font-size: 19px;
+  line-height: 26px;
+  font-weight: 300;
+}
+main {
+  background: url("../images/tree.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  padding: 50px 0 140px;
+}
+.slider {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 31%;
+  .slick-list {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  .slick-dots {
+    bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    li {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      button {
+        width: 12px;
+        height: 12px;
+        padding: 0;
+        border-radius: 50%;
+        border: 1px solid $white;
+        background-color: transparent;
+        &::before {
+          display: none;
+        }
+      }
+      &.slick-active {
+        button {
+          background-color: $white;
+        }
+      }
+    }
+  }
+  &Item {
+    &__inner {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      img {
+        @include fullImage;
+      }
+    }
+  }
+}
